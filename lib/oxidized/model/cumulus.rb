@@ -11,6 +11,12 @@ class Cumulus < Oxidized::Model
     cfg.cut_both
   end
 
+  cmd 'net show configuration' do |out|
+    out.type = 'nclu'
+    out.name = 'nclu'
+    out
+  end
+
   # show the persistent configuration
   pre do
     # Set FRR or Quagga in config
